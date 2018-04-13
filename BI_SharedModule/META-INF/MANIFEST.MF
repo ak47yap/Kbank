@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BI_SharedModule Module
+Bundle-SymbolicName: BI_SharedModule
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-Edition: bwcf
+Provide-Capability: com.tibco.bw.module; name="BI_SharedModule"; version:Version="1.0.0",
+ com.tibco.bw.schemas; ns="http://demo.tibco.com/Account",
+ com.tibco.bw.schemas; ns="http://demo.tibco.com/Customer",
+ com.tibco.bw.schemas; ns="http://demo.tibco.com/Merchant",
+ com.tibco.bw.schemas; ns="http://demo.tibco.com/Transaction",
+ com.tibco.bw.resources; name="bi_sharedmodule"
+TIBCO-BW-Version: 2.3.3 V12 2018-02-20
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.jdbc)"
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+TIBCO-BW-SharedModule: META-INF/module.bwm
+TIBCO-BWCE-Edition-Target: cf
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv

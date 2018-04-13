@@ -1,0 +1,107 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/accounttrx" : {
+      "get" : {
+        "description" : "",
+        "operationId" : "get-accounttrx",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "acct_no",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a listTransaction to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/listTransaction"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "accountTransaction" : {
+      "type" : "object",
+      "required" : [ "transactionFull", "merchantFull" ],
+      "properties" : {
+        "merchantFull" : {
+          "$ref" : "#/definitions/merchantFull"
+        },
+        "transactionFull" : {
+          "$ref" : "#/definitions/transactionFull"
+        }
+      }
+    },
+    "transactionFull" : {
+      "type" : "object",
+      "required" : [ "trx_no" ],
+      "properties" : {
+        "trx_no" : {
+          "type" : "integer"
+        },
+        "trx_date" : {
+          "type" : "string"
+        },
+        "merchant_id" : {
+          "type" : "integer"
+        },
+        "acct_no" : {
+          "type" : "string"
+        },
+        "topup_no" : {
+          "type" : "string"
+        },
+        "topup_amount" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    },
+    "listTransaction" : {
+      "type" : "object",
+      "properties" : {
+        "accountTransaction" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/accountTransaction",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "merchantFull" : {
+      "type" : "object",
+      "required" : [ "merchant_id" ],
+      "properties" : {
+        "merchant_id" : {
+          "type" : "string"
+        },
+        "merchant_no" : {
+          "type" : "string"
+        },
+        "merchant_name" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

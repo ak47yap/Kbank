@@ -1,0 +1,78 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/merchant_trx" : {
+      "get" : {
+        "description" : "",
+        "operationId" : "get-merchant_trx",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "merchant_id",
+          "in" : "query",
+          "description" : "",
+          "type" : "integer",
+          "format" : "int32",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a merchantTransaction to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/merchantTransaction"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "merchantTransaction" : {
+      "type" : "object",
+      "properties" : {
+        "transactionFull" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/transactionFull",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "transactionFull" : {
+      "type" : "object",
+      "required" : [ "trx_no" ],
+      "properties" : {
+        "trx_no" : {
+          "type" : "integer"
+        },
+        "trx_date" : {
+          "type" : "string"
+        },
+        "merchant_id" : {
+          "type" : "integer"
+        },
+        "acct_no" : {
+          "type" : "string"
+        },
+        "topup_no" : {
+          "type" : "string"
+        },
+        "topup_amount" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

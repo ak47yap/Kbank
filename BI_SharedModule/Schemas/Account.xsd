@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://demo.tibco.com/Account"
+	elementFormDefault="qualified"
+	targetNamespace="http://demo.tibco.com/Account" xmlns:pref="http://demo.tibco.com/Merchant">
+
+	<import schemaLocation="Merchant.xsd" namespace="http://demo.tibco.com/Merchant"></import>
+
+	<complexType name="accountFullInfo">
+		<sequence>
+			<element name="account_id" type="string" />
+			<element name="customer_id" type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_no"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_class"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_currency"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_balance"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_status"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_branch"
+				type="string" />
+			<element name="listTransaction" type="pref:listTransaction" maxOccurs="unbounded"/>	
+		</sequence>
+	</complexType>
+
+	<element name="accountFullInfo" type="tns:accountFullInfo" />
+	
+	<complexType name="accountList">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="accountFull" type="tns:accountFull" />
+		</sequence>
+	</complexType>
+
+	<element name="accountList" type="tns:accountList" />
+
+	<complexType name="accountFull">
+		<sequence>
+			<element name="account_id" type="string" />
+			<element name="customer_id" type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_no"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_class"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_currency"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_balance"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_status"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_branch"
+				type="string" />
+		</sequence>
+	</complexType>
+
+	<element name="accountFull" type="tns:accountFull" />
+
+	<complexType name="accountPatch">
+		<sequence>
+			<element maxOccurs="1" minOccurs="0" name="account_balance"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_status"
+				type="string" />
+			<element maxOccurs="1" minOccurs="0" name="account_branch"
+				type="string" />
+		</sequence>
+	</complexType>
+
+	<element name="accountPatch" type="tns:accountPatch" />
+
+</schema>

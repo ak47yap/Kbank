@@ -1,0 +1,169 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/transaction" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "post-transaction",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/transactionFull"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a transactionFull to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/transactionFull"
+            }
+          }
+        }
+      },
+      "get" : {
+        "description" : "",
+        "operationId" : "get-transaction",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "trx_no",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a transactionFull to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/transactionFull"
+            }
+          }
+        }
+      },
+      "put" : {
+        "description" : "",
+        "operationId" : "put-transaction",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/transactionFull"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "description" : "",
+        "operationId" : "delete-transaction",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "trx_no",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "patch" : {
+        "description" : "",
+        "operationId" : "patch-transaction",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/transactionPatch"
+          },
+          "required" : true
+        }, {
+          "name" : "trx_no",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "transactionPatch" : {
+      "type" : "object",
+      "properties" : {
+        "topup_amount" : {
+          "type" : "string"
+        }
+      }
+    },
+    "transactionFull" : {
+      "type" : "object",
+      "required" : [ "trx_no" ],
+      "properties" : {
+        "trx_no" : {
+          "type" : "integer"
+        },
+        "trx_date" : {
+          "type" : "string"
+        },
+        "merchant_id" : {
+          "type" : "integer"
+        },
+        "acct_no" : {
+          "type" : "string"
+        },
+        "topup_no" : {
+          "type" : "string"
+        },
+        "topup_amount" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

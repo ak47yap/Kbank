@@ -1,0 +1,109 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/customeraccount" : {
+      "get" : {
+        "description" : "",
+        "operationId" : "get-customeraccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "cust_id",
+          "in" : "query",
+          "description" : "",
+          "type" : "integer",
+          "format" : "int32",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a customerAccount to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/customerAccount"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "customerAccount" : {
+      "type" : "object",
+      "required" : [ "customerFull" ],
+      "properties" : {
+        "customerFull" : {
+          "$ref" : "#/definitions/customerFull"
+        },
+        "account" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/account",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "customerFull" : {
+      "type" : "object",
+      "required" : [ "customer_id" ],
+      "properties" : {
+        "customer_id" : {
+          "type" : "string"
+        },
+        "customer_no" : {
+          "type" : "string"
+        },
+        "customer_type" : {
+          "type" : "string"
+        },
+        "customer_name" : {
+          "type" : "string"
+        },
+        "customer_status" : {
+          "type" : "string"
+        },
+        "customer_branch" : {
+          "type" : "string"
+        }
+      }
+    },
+    "account" : {
+      "type" : "object",
+      "required" : [ "account_id", "customer_id" ],
+      "properties" : {
+        "account_id" : {
+          "type" : "string"
+        },
+        "customer_id" : {
+          "type" : "string"
+        },
+        "account_no" : {
+          "type" : "string"
+        },
+        "account_class" : {
+          "type" : "string"
+        },
+        "account_currency" : {
+          "type" : "string"
+        },
+        "account_balance" : {
+          "type" : "string"
+        },
+        "account_status" : {
+          "type" : "string"
+        },
+        "account_branch" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

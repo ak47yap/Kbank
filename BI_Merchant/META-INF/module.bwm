@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_RkpCADv4EeiLmrqnYuUZbA" targetNamespace="http://tns.tibco.com/bw/composite/BI_Merchant" name="BI_Merchant" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_OCvzIjv5EeiLmrqnYuUZbA" name="merchant" promote="Componentmerchant/merchant">
+    <sca:interface.wsdl xmi:id="_OCwaMjv5EeiLmrqnYuUZbA" interface="http://xmlns.example.com/20180409202338PLT#wsdl.interface(merchant)" scaext:wsdlLocation="../Processes/bi_merchant/merchant.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_ODkSgDv5EeiLmrqnYuUZbA" name="RestService" path="/merchant" docBasePath="http://localhost:7777/BI_Merchant" docResourcePath="merchant" basePath="/" connector="bi_merchant.merchant" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bi_merchant.merchant-merchant.json">
+      <operation xmi:id="_ODmHsDv5EeiLmrqnYuUZbA" operationName="post" nickname="post-merchant" httpMethod="POST" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_ODmHsTv5EeiLmrqnYuUZbA" operationName="get" nickname="get-merchant" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_D4abMDv7EeiLmrqnYuUZbA">
+          <parameterMapping xmi:id="_D4abMTv7EeiLmrqnYuUZbA" parameterName="id" parameterType="Query" dataType="integer#int32" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_ODmHsjv5EeiLmrqnYuUZbA" operationName="put" nickname="put-merchant" httpMethod="PUT" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_ODmHszv5EeiLmrqnYuUZbA" operationName="delete" nickname="delete-merchant" httpMethod="DELETE" responseStyle="element">
+        <parameters xmi:id="_MPurcDv7EeiLmrqnYuUZbA">
+          <parameterMapping xmi:id="_MPurcTv7EeiLmrqnYuUZbA" parameterName="id" parameterType="Query" dataType="integer#int32" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_OEF28Dv5EeiLmrqnYuUZbA"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_ODmHtDv5EeiLmrqnYuUZbA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_RqX2kDv4EeiLmrqnYuUZbA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Rr0oEDv4EeiLmrqnYuUZbA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_RtTOwDv4EeiLmrqnYuUZbA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_RubQIDv4EeiLmrqnYuUZbA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_RvgOMDv4EeiLmrqnYuUZbA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Rwo2oDv4EeiLmrqnYuUZbA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_Rxt0sDv4EeiLmrqnYuUZbA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0HTY0D7tEeinx9e-2df-oA" name="serviceName" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_OCab8Dv5EeiLmrqnYuUZbA" name="Componentmerchant" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_OCab8Tv5EeiLmrqnYuUZbA" processName="bi_merchant.merchant"/>
+    <sca:service xmi:id="_OCvzIDv5EeiLmrqnYuUZbA" name="merchant">
+      <sca:interface.wsdl xmi:id="_OCvzITv5EeiLmrqnYuUZbA" interface="http://xmlns.example.com/20180409202338PLT#wsdl.interface(merchant)" scaext:wsdlLocation="../Processes/bi_merchant/merchant.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

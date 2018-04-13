@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/BI_Customer/Service Descriptors/bi_customer.customer-customer.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://demo.tibco.com/Customer"
+}]}

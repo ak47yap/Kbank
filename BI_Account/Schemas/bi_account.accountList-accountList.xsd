@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="/T1523341758148Converted/JsonSchema" xmlns:tns="/T1523341758148Converted/JsonSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="accountFull" type="tns:accountFull"/>
+    <xs:complexType name="accountFull">
+        <xs:sequence>
+            <xs:element name="account_id" type="xs:string"/>
+            <xs:element name="customer_id" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_no" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_class" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_currency" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_balance" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_status" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_branch" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="accountList" type="tns:accountList"/>
+    <xs:complexType name="accountList">
+        <xs:sequence>
+            <xs:element name="accountFull" type="tns:accountFull"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

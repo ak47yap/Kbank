@@ -1,0 +1,21 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/bi_transaction.transaction-transaction.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/bi_transaction.merchant_trx-merchant_trx.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/bi_transaction.acct_trx-acct_trx.json",
+            "type": "generated"
+        }
+    ]
+}

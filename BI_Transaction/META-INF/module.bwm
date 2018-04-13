@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_BWEqkDxZEeiLmrqnYuUZbA" targetNamespace="http://tns.tibco.com/bw/composite/BI_Transaction" name="BI_Transaction" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_FAl0gjxZEeiLmrqnYuUZbA" name="transaction" promote="Componenttransaction/transaction">
+    <sca:interface.wsdl xmi:id="_FAo30TxZEeiLmrqnYuUZbA" interface="http://xmlns.example.com/20180410074948PLT#wsdl.interface(transaction)" scaext:wsdlLocation="../Processes/bi_transaction/transaction.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_FBfzcDxZEeiLmrqnYuUZbA" name="RestService" path="/transaction" docBasePath="http://localhost:7777/BI_Transaction" docResourcePath="transaction" basePath="/" connector="bi_transaction.transaction" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bi_transaction.transaction-transaction.json">
+      <operation xmi:id="_FBi2wDxZEeiLmrqnYuUZbA" operationName="post" nickname="post-transaction" httpMethod="POST" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_FBi2wTxZEeiLmrqnYuUZbA" operationName="get" nickname="get-transaction" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_RW9UQDxZEeiLmrqnYuUZbA">
+          <parameterMapping xmi:id="_RW9UQTxZEeiLmrqnYuUZbA" parameterName="trx_no" parameterType="Query" dataType="string" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_FBi2wjxZEeiLmrqnYuUZbA" operationName="put" nickname="put-transaction" httpMethod="PUT" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_FBi2wzxZEeiLmrqnYuUZbA" operationName="delete" nickname="delete-transaction" httpMethod="DELETE" responseStyle="element">
+        <parameters xmi:id="_ZXBiIDxZEeiLmrqnYuUZbA">
+          <parameterMapping xmi:id="_ZXBiITxZEeiLmrqnYuUZbA" parameterName="trx_no" parameterType="Query" dataType="string" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_FBi2xDxZEeiLmrqnYuUZbA" operationName="patch" nickname="patch-transaction" httpMethod="PATCH" responseStyle="element">
+        <parameters xmi:id="_cxOYIDxZEeiLmrqnYuUZbA">
+          <parameterMapping xmi:id="_cxOYITxZEeiLmrqnYuUZbA" parameterName="trx_no" parameterType="Query" dataType="string" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_FCD0IDxZEeiLmrqnYuUZbA"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_FBi2xTxZEeiLmrqnYuUZbA" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_X2-bIjyaEei_tI6rXLVPaw" name="merchant_trx" promote="Componentmerchant_trx/merchant_trx">
+    <sca:interface.wsdl xmi:id="_X2_CMTyaEei_tI6rXLVPaw" interface="http://xmlns.example.com/20180410153715PLT#wsdl.interface(merchant_trx)" scaext:wsdlLocation="../Processes/bi_transaction/merchant_trx.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_X3DToDyaEei_tI6rXLVPaw" name="RestService1" path="/merchant_trx" docBasePath="http://localhost:7777/BI_Transaction" docResourcePath="merchant_trx" basePath="/" connector="bi_transaction.transaction" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bi_transaction.merchant_trx-merchant_trx.json">
+      <operation xmi:id="_X3GW8DyaEei_tI6rXLVPaw" operationName="get" nickname="get-merchant_trx" httpMethod="GET" responseStyle="element" requestStyle="element">
+        <parameters xmi:id="_bOl3MDyaEei_tI6rXLVPaw">
+          <parameterMapping xmi:id="_bOl3MTyaEei_tI6rXLVPaw" parameterName="merchant_id" parameterType="Query" dataType="integer#int32" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_X3G-ADyaEei_tI6rXLVPaw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_X3GW8TyaEei_tI6rXLVPaw" bindingName="RestService1"/>
+  </sca:service>
+  <sca:service xmi:id="_gM-e8DypEei2ZsEd2vUw7g" name="acct_trx" promote="Componentacct_trx/acct_trx">
+    <sca:interface.wsdl xmi:id="_gND-gDypEei2ZsEd2vUw7g" interface="http://xmlns.example.com/20180410172534PLT#wsdl.interface(acct_trx)" scaext:wsdlLocation="../Processes/bi_transaction/acct_trx.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_gNOWkDypEei2ZsEd2vUw7g" name="RestService2" path="/acct_trx" docBasePath="http://localhost:7777/BI_Transaction" docResourcePath="acct_trx" basePath="/" connector="bi_transaction.transaction" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bi_transaction.acct_trx-acct_trx.json">
+      <operation xmi:id="_gNWSYDypEei2ZsEd2vUw7g" operationName="get" nickname="get-acct_trx" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_0SSnYDypEei2ZsEd2vUw7g">
+          <parameterMapping xmi:id="_0SSnYTypEei2ZsEd2vUw7g" parameterName="acct_no" parameterType="Query" dataType="string" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_gNaj0DypEei2ZsEd2vUw7g"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_gNWSYTypEei2ZsEd2vUw7g" bindingName="RestService2"/>
+  </sca:service>
+  <sca:property xmi:id="_BcGaEDxZEeiLmrqnYuUZbA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BddsADxZEeiLmrqnYuUZbA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Be4oUDxZEeiLmrqnYuUZbA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BgLBwDxZEeiLmrqnYuUZbA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BhWtgDxZEeiLmrqnYuUZbA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Bieu4DxZEeiLmrqnYuUZbA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_Bj32ADxZEeiLmrqnYuUZbA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6mcmgD7tEeinx9e-2df-oA" name="serviceName" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_FANaADxZEeiLmrqnYuUZbA" name="Componenttransaction" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_FANaATxZEeiLmrqnYuUZbA" processName="bi_transaction.transaction"/>
+    <sca:service xmi:id="_FAl0gDxZEeiLmrqnYuUZbA" name="transaction">
+      <sca:interface.wsdl xmi:id="_FAl0gTxZEeiLmrqnYuUZbA" interface="http://xmlns.example.com/20180410074948PLT#wsdl.interface(transaction)" scaext:wsdlLocation="../Processes/bi_transaction/transaction.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_X290EDyaEei_tI6rXLVPaw" name="Componentmerchant_trx" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_X290ETyaEei_tI6rXLVPaw" processName="bi_transaction.merchant_trx"/>
+    <sca:service xmi:id="_X2-bIDyaEei_tI6rXLVPaw" name="merchant_trx">
+      <sca:interface.wsdl xmi:id="_X2-bITyaEei_tI6rXLVPaw" interface="http://xmlns.example.com/20180410153715PLT#wsdl.interface(merchant_trx)" scaext:wsdlLocation="../Processes/bi_transaction/merchant_trx.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_gM3KMDypEei2ZsEd2vUw7g" name="Componentacct_trx" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_gM3KMTypEei2ZsEd2vUw7g" processName="bi_transaction.acct_trx"/>
+    <sca:service xmi:id="_gM7boDypEei2ZsEd2vUw7g" name="acct_trx">
+      <sca:interface.wsdl xmi:id="_gM8CsDypEei2ZsEd2vUw7g" interface="http://xmlns.example.com/20180410172534PLT#wsdl.interface(acct_trx)" scaext:wsdlLocation="../Processes/bi_transaction/acct_trx.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/bi_merchant.merchant-merchant.json",
+        "type": "generated"
+    }]
+}

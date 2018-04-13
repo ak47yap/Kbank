@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="http://demo.tibco.com/Merchant" xmlns:tns="http://demo.tibco.com/Transaction" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://demo.tibco.com/Merchant">
+
+	<xsd:import namespace="http://demo.tibco.com/Transaction" schemaLocation="Transaction.xsd"/>
+
+	<xsd:complexType name="historyTransaction">
+		<xsd:sequence>
+			<xsd:element name="merchantFull" type="merchantFull"/>
+			<xsd:element name="merchantTrx" type="tns:merchantTransaction"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="historyTransaction" type="historyTransaction"/>
+
+	<xsd:complexType name="accountTransaction">
+		<xsd:sequence>
+			<xsd:element name="merchantFull" type="merchantFull"/>
+			<xsd:element name="transactionFull" type="tns:transactionFull"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="accountTransaction" type="accountTransaction"/>
+
+	<xsd:complexType name="listTransaction">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="accountTransaction" type="accountTransaction"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="listTransaction" type="listTransaction"/>
+	
+	<xsd:complexType name="merchantFull">
+		<xsd:sequence>
+			<xsd:element name="merchant_id" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="merchant_no" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="merchant_name" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="status" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="merchantFull" type="merchantFull"/>
+
+</xsd:schema>

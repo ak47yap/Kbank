@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_XKeSwDygEei_tI6rXLVPaw" targetNamespace="http://tns.tibco.com/bw/composite/BS_MerchantTransaction" name="BS_MerchantTransaction" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_nH404jykEei_tI6rXLVPaw" name="historytrx" promote="ComponenthistoryTrx/historytrx">
+    <sca:interface.wsdl xmi:id="_nH405jykEei_tI6rXLVPaw" interface="http://xmlns.example.com/20180410165033PLT#wsdl.interface(historytrx)" scaext:wsdlLocation="../Processes/bs_merchanttransaction/historyTrx.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_nH-7gDykEei_tI6rXLVPaw" name="RestService" path="/historytrx" docBasePath="http://localhost:7777/BS_MerchantTransaction" docResourcePath="historyTrx" basePath="/" connector="bs_merchanttransaction.historyTransaction" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bs_merchanttransaction.historyTrx-historyTrx.json">
+      <operation xmi:id="_nIDM8DykEei_tI6rXLVPaw" operationName="get" nickname="get-historytrx" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_pVU80DykEei_tI6rXLVPaw">
+          <parameterMapping xmi:id="_pVU80TykEei_tI6rXLVPaw" parameterName="merchant_id" parameterType="Query" dataType="integer#int32" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_nIFCIDykEei_tI6rXLVPaw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_nIDM8TykEei_tI6rXLVPaw" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_bQcKsD0xEeiXcaNXc4EuBw" name="accounttrx" promote="ComponentaccountTrx/accounttrx">
+    <sca:interface.wsdl xmi:id="_bQhDMD0xEeiXcaNXc4EuBw" interface="http://xmlns.example.com/20180411093832PLT#wsdl.interface(accounttrx)" scaext:wsdlLocation="../Processes/bs_merchanttransaction/accountTrx.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_bQpmED0xEeiXcaNXc4EuBw" name="RestService1" path="/accounttrx" docBasePath="http://localhost:7777/BS_MerchantTransaction" docResourcePath="accountTrx" basePath="/" connector="bs_merchanttransaction.historyTransaction" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bs_merchanttransaction.accountTrx-accountTrx.json">
+      <operation xmi:id="_bQvFoD0xEeiXcaNXc4EuBw" operationName="get" nickname="get-accounttrx" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_ebpicD0xEeiXcaNXc4EuBw">
+          <parameterMapping xmi:id="_ebpicT0xEeiXcaNXc4EuBw" parameterName="acct_no" parameterType="Query" dataType="string" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_bQw60D0xEeiXcaNXc4EuBw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_bQvFoT0xEeiXcaNXc4EuBw" bindingName="RestService1"/>
+  </sca:service>
+  <sca:property xmi:id="_XRoDoDygEei_tI6rXLVPaw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XRqf4DygEei_tI6rXLVPaw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XRruADygEei_tI6rXLVPaw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XRsVEDygEei_tI6rXLVPaw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XRtjMDygEei_tI6rXLVPaw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XRuxUDygEei_tI6rXLVPaw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_XRvYYDygEei_tI6rXLVPaw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ZjpegD7uEeinx9e-2df-oA" name="serviceName" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_nH4N0DykEei_tI6rXLVPaw" name="ComponenthistoryTrx" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_nH4N0TykEei_tI6rXLVPaw" processName="bs_merchanttransaction.historyTrx"/>
+    <sca:service xmi:id="_nH404DykEei_tI6rXLVPaw" name="historytrx">
+      <sca:interface.wsdl xmi:id="_nH404TykEei_tI6rXLVPaw" interface="http://xmlns.example.com/20180410165033PLT#wsdl.interface(historytrx)" scaext:wsdlLocation="../Processes/bs_merchanttransaction/historyTrx.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_bQVdAD0xEeiXcaNXc4EuBw" name="ComponentaccountTrx" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_bQVdAT0xEeiXcaNXc4EuBw" processName="bs_merchanttransaction.accountTrx"/>
+    <sca:service xmi:id="_bQZHYD0xEeiXcaNXc4EuBw" name="accounttrx">
+      <sca:interface.wsdl xmi:id="_bQZucD0xEeiXcaNXc4EuBw" interface="http://xmlns.example.com/20180411093832PLT#wsdl.interface(accounttrx)" scaext:wsdlLocation="../Processes/bs_merchanttransaction/accountTrx.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

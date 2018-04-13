@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/bi_customer.customer-customer.json",
+        "type": "generated"
+    }]
+}

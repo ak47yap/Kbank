@@ -1,0 +1,17 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/bs_customeraccounts.customerAccount-customerAccount.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/bs_customeraccounts.customerFullInfo-customerFullInfo.json",
+            "type": "generated"
+        }
+    ]
+}

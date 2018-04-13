@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/BI_Transaction/Service Descriptors/bi_transaction.merchant_trx-merchant_trx.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://demo.tibco.com/Transaction"
+    },
+    {
+        "jsonSchemaLocation": "/BI_Transaction/Service Descriptors/bi_transaction.acct_trx-acct_trx.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://demo.tibco.com/Transaction"
+    }
+]}

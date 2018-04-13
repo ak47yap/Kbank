@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="/T1523432389074Converted/JsonSchema" xmlns:tns="/T1523432389074Converted/JsonSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="account" type="tns:account"/>
+    <xs:complexType name="account">
+        <xs:sequence>
+            <xs:element name="account_id" type="xs:string"/>
+            <xs:element name="customer_id" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_no" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_class" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_currency" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_balance" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_status" type="xs:string"/>
+            <xs:element minOccurs="0" name="account_branch" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="customerAccount" type="tns:customerAccount"/>
+    <xs:complexType name="customerAccount">
+        <xs:sequence>
+            <xs:element name="customerFull" type="tns:customerFull"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="account" type="tns:account"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="customerFull" type="tns:customerFull"/>
+    <xs:complexType name="customerFull">
+        <xs:sequence>
+            <xs:element name="customer_id" type="xs:string"/>
+            <xs:element minOccurs="0" name="customer_no" type="xs:string"/>
+            <xs:element minOccurs="0" name="customer_type" type="xs:string"/>
+            <xs:element minOccurs="0" name="customer_name" type="xs:string"/>
+            <xs:element minOccurs="0" name="customer_status" type="xs:string"/>
+            <xs:element minOccurs="0" name="customer_branch" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,181 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/account" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "post-account",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/accountFull"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a accountFull to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/accountFull"
+            }
+          }
+        }
+      },
+      "get" : {
+        "description" : "",
+        "operationId" : "get-account",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "",
+          "type" : "integer",
+          "format" : "int32",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a accountFull to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/accountFull"
+            }
+          }
+        }
+      },
+      "put" : {
+        "description" : "",
+        "operationId" : "put-account",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/accountFull"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "description" : "",
+        "operationId" : "delete-account",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "",
+          "type" : "integer",
+          "format" : "int32",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "patch" : {
+        "description" : "",
+        "operationId" : "patch-account",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/accountPatch"
+          },
+          "required" : true
+        }, {
+          "name" : "id",
+          "in" : "query",
+          "description" : "",
+          "type" : "integer",
+          "format" : "int32",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "accountFull" : {
+      "type" : "object",
+      "required" : [ "account_id", "customer_id" ],
+      "properties" : {
+        "account_id" : {
+          "type" : "string"
+        },
+        "customer_id" : {
+          "type" : "string"
+        },
+        "account_no" : {
+          "type" : "string"
+        },
+        "account_class" : {
+          "type" : "string"
+        },
+        "account_currency" : {
+          "type" : "string"
+        },
+        "account_balance" : {
+          "type" : "string"
+        },
+        "account_status" : {
+          "type" : "string"
+        },
+        "account_branch" : {
+          "type" : "string"
+        }
+      }
+    },
+    "accountPatch" : {
+      "type" : "object",
+      "properties" : {
+        "account_balance" : {
+          "type" : "string"
+        },
+        "account_status" : {
+          "type" : "string"
+        },
+        "account_branch" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://demo.tibco.com/Customer"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://demo.tibco.com/Customer"
+	xmlns:pref="http://demo.tibco.com/Account">
+
+	<import schemaLocation="Account.xsd" namespace="http://demo.tibco.com/Account">
+	</import>
+		
+	<complexType name="customerFullInfo">
+		<sequence>
+			<element name="customerFull" type="tns:customerFull">
+			</element>
+			<element name="accountFullInfo" type="pref:accountFullInfo" minOccurs="0" maxOccurs="unbounded">
+			</element>
+			
+		</sequence>
+	</complexType>
+
+	<element name="customerFullInfo" type="tns:customerFullInfo"></element>
+
+	<complexType name="customerFull">
+		<sequence>
+			<element name="customer_id" type="string"></element>
+			<element name="customer_no" type="string" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="customer_type" type="string" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="customer_name" type="string" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="customer_status" type="string" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="customer_branch" type="string" maxOccurs="1"
+				minOccurs="0">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="customerAccount">
+		<sequence>
+			<element name="customerFull" type="tns:customerFull"></element>
+			<element name="account" type="pref:accountFull"
+				minOccurs="0" maxOccurs="unbounded">
+			</element>
+		</sequence>
+	</complexType>
+
+	<element name="customerAccount" type="tns:customerAccount"></element>
+
+	<element name="customerFull" type="tns:customerFull"></element>
+
+	<complexType name="customerPatch">
+		<sequence>
+			<element name="customer_no" type="string" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="customer_name" type="string" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="customer_status" type="string" maxOccurs="1"
+				minOccurs="0">
+			</element>
+		</sequence>
+	</complexType>
+
+	<element name="customerPatch" type="tns:customerPatch"></element>
+
+</schema>

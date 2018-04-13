@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/BI_Account/Service Descriptors/bi_account.account-account.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://demo.tibco.com/Account"
+    },
+    {
+        "jsonSchemaLocation": "/BI_Account/Service Descriptors/bi_account.listaccount-listaccount.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://demo.tibco.com/Account"
+    }
+]}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_2BvPADl4EeiLmrqnYuUZbA" targetNamespace="http://tns.tibco.com/bw/composite/BI_Account" name="BI_Account" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_WmoHojmnEeiLmrqnYuUZbA" name="account" promote="Componentaccount/account">
+    <sca:interface.wsdl xmi:id="_WmoHpjmnEeiLmrqnYuUZbA" interface="http://xmlns.example.com/20180406213234PLT#wsdl.interface(account)" scaext:wsdlLocation="../Processes/bi_account/account.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_Wnd1IDmnEeiLmrqnYuUZbA" name="RestService" path="/account" docBasePath="http://localhost:7777/BI_Account" docResourcePath="account" basePath="/" connector="bi_account.account" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bi_account.account-account.json">
+      <operation xmi:id="_WnfDQDmnEeiLmrqnYuUZbA" operationName="post" nickname="post-account" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_WnfDQTmnEeiLmrqnYuUZbA" operationName="get" nickname="get-account" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_x_J_ADmnEeiLmrqnYuUZbA">
+          <parameterMapping xmi:id="_x_J_ATmnEeiLmrqnYuUZbA" parameterName="id" parameterType="Query" dataType="integer#int32" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_WnfDQjmnEeiLmrqnYuUZbA" operationName="put" nickname="put-account" httpMethod="PUT" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_WnfDQzmnEeiLmrqnYuUZbA" operationName="delete" nickname="delete-account" httpMethod="DELETE" responseStyle="element">
+        <parameters xmi:id="_37Ej0DmnEeiLmrqnYuUZbA">
+          <parameterMapping xmi:id="_37Ej0TmnEeiLmrqnYuUZbA" parameterName="id" parameterType="Query" dataType="integer#int32" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_WnfDRDmnEeiLmrqnYuUZbA" operationName="patch" nickname="patch-account" httpMethod="PATCH" responseStyle="element" requestStyle="element">
+        <parameters xmi:id="_8RkqADmnEeiLmrqnYuUZbA">
+          <parameterMapping xmi:id="_8RkqATmnEeiLmrqnYuUZbA" parameterName="id" parameterType="Query" dataType="integer#int32" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_WoH8cDmnEeiLmrqnYuUZbA"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_WnfDRTmnEeiLmrqnYuUZbA" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_xEeCgDyTEei_tI6rXLVPaw" name="listaccount" promote="Componentlistaccount/listaccount">
+    <sca:interface.wsdl xmi:id="_xEiT8DyTEei_tI6rXLVPaw" interface="http://xmlns.example.com/20180410144958PLT#wsdl.interface(listaccount)" scaext:wsdlLocation="../Processes/bi_account/listaccount.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_xEnzgDyTEei_tI6rXLVPaw" name="RestService1" path="/listaccount" docBasePath="http://localhost:7777/BI_Account" docResourcePath="listaccount" basePath="/" connector="bi_account.account" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bi_account.listaccount-listaccount.json">
+      <operation xmi:id="_xErd4DyTEei_tI6rXLVPaw" operationName="get" nickname="get-listaccount" httpMethod="GET" responseStyle="element" requestStyle="element">
+        <parameters xmi:id="_-HnIsDyTEei_tI6rXLVPaw">
+          <parameterMapping xmi:id="_-HnvwDyTEei_tI6rXLVPaw" parameterName="cust_id" parameterType="Query" dataType="integer#int32" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_xEuhMDyTEei_tI6rXLVPaw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_xErd4TyTEei_tI6rXLVPaw" bindingName="RestService1"/>
+  </sca:service>
+  <sca:property xmi:id="_2I4_4Dl4EeiLmrqnYuUZbA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2KKLMDl4EeiLmrqnYuUZbA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2LOiMDl4EeiLmrqnYuUZbA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2MREADl4EeiLmrqnYuUZbA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2NS-wDl4EeiLmrqnYuUZbA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2OSdQDl4EeiLmrqnYuUZbA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_2PO4cDl4EeiLmrqnYuUZbA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6zKdMDmlEeiLmrqnYuUZbA" name="serviceName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_WmRiUDmnEeiLmrqnYuUZbA" name="Componentaccount" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_WmRiUTmnEeiLmrqnYuUZbA" processName="bi_account.account"/>
+    <sca:service xmi:id="_WmoHoDmnEeiLmrqnYuUZbA" name="account">
+      <sca:interface.wsdl xmi:id="_WmoHoTmnEeiLmrqnYuUZbA" interface="http://xmlns.example.com/20180406213234PLT#wsdl.interface(account)" scaext:wsdlLocation="../Processes/bi_account/account.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_xEYi8DyTEei_tI6rXLVPaw" name="Componentlistaccount" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_xEYi8TyTEei_tI6rXLVPaw" processName="bi_account.listaccount"/>
+    <sca:service xmi:id="_xEa_MDyTEei_tI6rXLVPaw" name="listaccount">
+      <sca:interface.wsdl xmi:id="_xEbmQDyTEei_tI6rXLVPaw" interface="http://xmlns.example.com/20180410144958PLT#wsdl.interface(listaccount)" scaext:wsdlLocation="../Processes/bi_account/listaccount.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

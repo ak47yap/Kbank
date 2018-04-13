@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://demo.tibco.com/Transaction" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://demo.tibco.com/Transaction">
+
+	<complexType name="merchantTransaction">
+    	<sequence>
+    		<element name="transactionFull" type="tns:transactionFull" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+	<element name="merchantTransaction" type="tns:merchantTransaction"></element>
+
+    <complexType name="transactionFull">
+    	<sequence>
+    		<element name="trx_no" type="int"></element>
+    		<element name="trx_date" type="dateTime" maxOccurs="1" minOccurs="0"></element>
+    		<element name="merchant_id" type="int" maxOccurs="1" minOccurs="0"></element>
+    		<element name="acct_no" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="topup_no" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="topup_amount" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="status" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="transactionFull" type="tns:transactionFull"></element>
+    
+    <complexType name="transactionPatch">
+    	<sequence>
+    		<element name="topup_amount" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+   	<element name="transactionPatch" type="tns:transactionPatch"></element>
+
+
+</schema>

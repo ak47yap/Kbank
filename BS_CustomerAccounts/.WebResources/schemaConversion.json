@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/BS_CustomerAccounts/Service Descriptors/bs_customeraccounts.customerFullInfo-customerFullInfo.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://demo.tibco.com/Customer"
+    },
+    {
+        "jsonSchemaLocation": "/BS_CustomerAccounts/Service Descriptors/bs_customeraccounts.customerAccount-customerAccount.json",
+        "conversionType": "generated",
+        "xsdSchemaTargetNamespace": "/T1523432389074Converted/JsonSchema"
+    }
+]}

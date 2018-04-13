@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/BI_Merchant/Service Descriptors/bi_merchant.merchant-merchant.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://demo.tibco.com/Merchant"
+}]}

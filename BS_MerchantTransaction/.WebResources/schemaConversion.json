@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/BS_MerchantTransaction/Service Descriptors/bs_merchanttransaction.historyTrx-historyTrx.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://demo.tibco.com/Merchant"
+    },
+    {
+        "jsonSchemaLocation": "/BS_MerchantTransaction/Service Descriptors/bs_merchanttransaction.accountTrx-accountTrx.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://demo.tibco.com/Merchant"
+    }
+]}
