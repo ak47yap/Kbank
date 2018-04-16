@@ -66,6 +66,14 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
+			<name>//BI_SharedModule//dbPass</name>
+			<value>#!l6vRJvsSAPLajkcOglVh/dGBFPJn6xUxkRPq3nYgxy6KfzSmLu1/lA==</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Password</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
 			<name>//BI_SharedModule//BW.APPNODE.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
@@ -98,6 +106,14 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
+			<name>//BI_SharedModule//dbUser</name>
+			<value>postgres</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
 			<name>//BI_SharedModule//BW.MODULE.VERSION</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
@@ -122,24 +138,8 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//BI_SharedModule//dbPass</name>
-			<value>#!l6vRJvsSAPLajkcOglVh/dGBFPJn6xUxkRPq3nYgxy6KfzSmLu1/lA==</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Password</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
-			<name>//BI_SharedModule//dbUser</name>
-			<value>bwuser</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
 			<name>//BI_SharedModule//dbURL</name>
-			<value>jdbc:tibcosoftwareinc:sqlserver://integrationdbinstance.cgwpzjawajgn.ap-southeast-1.rds.amazonaws.com:1433;DatabaseName=kbzdemo</value>
+			<value>jdbc:postgresql://banktransferdb.cgwpzjawajgn.ap-southeast-1.rds.amazonaws.com:5432/Kbank</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

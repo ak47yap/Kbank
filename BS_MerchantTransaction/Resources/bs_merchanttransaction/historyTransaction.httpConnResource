@@ -3,6 +3,6 @@
   <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_VoI18DyjEei_tI6rXLVPaw" svcRegServiceName="Property ">
     <substitutionBindings xmi:id="_VoI18TyjEei_tI6rXLVPaw" template="host" propName="BW.HOST.NAME"/>
     <substitutionBindings xmi:id="_7Pl4EDymEei_tI6rXLVPaw" template="port" propName="BW.CLOUD.PORT"/>
-    <substitutionBindings xmi:id="_ZOV84D7uEeinx9e-2df-oA" template="svcRegServiceName" propName="serviceName"/>
+    <substitutionBindings xmi:id="_v_mEwEErEeifG8TD48e-CQ" template="svcRegServiceName" propName="serviceName"/>
   </jndi:configuration>
 </jndi:namedResource>

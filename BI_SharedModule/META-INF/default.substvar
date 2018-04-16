@@ -59,7 +59,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>dbUser</name>
-			<value>bwuser</value>
+			<value>postgres</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -75,7 +75,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>dbURL</name>
-			<value>jdbc:tibcosoftwareinc:sqlserver://integrationdbinstance.cgwpzjawajgn.ap-southeast-1.rds.amazonaws.com:1433;DatabaseName=kbzdemo</value>
+			<value>jdbc:postgresql://banktransferdb.cgwpzjawajgn.ap-southeast-1.rds.amazonaws.com:5432/Kbank</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

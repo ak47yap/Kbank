@@ -35,7 +35,7 @@
   <sca:property xmi:id="_BMaz8DyIEeiLmrqnYuUZbA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_BNw3wDyIEeiLmrqnYuUZbA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="_BO-_wDyIEeiLmrqnYuUZbA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="__54PAD7tEeinx9e-2df-oA" name="serviceName" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_YLLicEEtEeimqLcTc-VyHw" name="serviceName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_F6r54DyIEeiLmrqnYuUZbA" name="ComponentcustomerAccount" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_F6r54TyIEeiLmrqnYuUZbA" processName="bs_customeraccounts.customerAccount"/>
     <sca:service xmi:id="_F7DtUDyIEeiLmrqnYuUZbA" name="customeraccount">

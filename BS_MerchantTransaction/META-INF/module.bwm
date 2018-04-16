@@ -35,7 +35,7 @@
   <sca:property xmi:id="_XRtjMDygEei_tI6rXLVPaw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_XRuxUDygEei_tI6rXLVPaw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="_XRvYYDygEei_tI6rXLVPaw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_ZjpegD7uEeinx9e-2df-oA" name="serviceName" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_wOFzwEErEeifG8TD48e-CQ" name="serviceName" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_nH4N0DykEei_tI6rXLVPaw" name="ComponenthistoryTrx" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_nH4N0TykEei_tI6rXLVPaw" processName="bs_merchanttransaction.historyTrx"/>
     <sca:service xmi:id="_nH404DykEei_tI6rXLVPaw" name="historytrx">

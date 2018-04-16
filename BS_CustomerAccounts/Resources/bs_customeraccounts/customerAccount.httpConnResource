@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_F773ETyIEeiLmrqnYuUZbA" name="bs_customeraccounts.customerAccount" type="httpconnector:HttpConnectorConfiguration">
-  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_F773EjyIEeiLmrqnYuUZbA" svcRegServiceName="Property ">
+  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_F773EjyIEeiLmrqnYuUZbA">
     <substitutionBindings xmi:id="_F773EzyIEeiLmrqnYuUZbA" template="host" propName="BW.HOST.NAME"/>
     <substitutionBindings xmi:id="_lO-fYDyMEeiLmrqnYuUZbA" template="port" propName="BW.CLOUD.PORT"/>
-    <substitutionBindings xmi:id="__sBZMD7tEeinx9e-2df-oA" template="svcRegServiceName" propName="serviceName"/>
+    <substitutionBindings xmi:id="_XrhK8EEtEeimqLcTc-VyHw" template="svcRegServiceName" propName="serviceName"/>
   </jndi:configuration>
 </jndi:namedResource>
